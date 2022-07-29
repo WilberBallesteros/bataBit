@@ -159,7 +159,7 @@ main {
 .main-tables-container {
     display: flex;
     gap: 10px; /*espacio entre tarjetas*/
-    height: 360px;
+    height: 400px;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
