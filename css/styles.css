@@ -154,6 +154,17 @@ main {
 }
 
 /*seccion tablas*/
+
+/*scroll de tablas*/
+.main-tables-container {
+    display: flex;
+    gap: 10px; /*espacio entre tarjetas*/
+    height: 360px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
 .main-currency-table {
     width: 70%;
     min-width: 235px;
@@ -181,6 +192,7 @@ main .currency-table--title {
 .currency-table--container table {
     width: 100%;
     height: 100%;
+    scroll-snap-align: center; /*css de scroll en las tablas*/
 }
 
 .currency-table--container td {
@@ -243,9 +255,6 @@ main .currency-table--title {
     background-color: var(--soft-orange);
     border-radius: 8px;
 }
-
-
-
 .currency-table--date p {
     font-size: 1.2rem;
     line-height: 1.5rem;
@@ -367,10 +376,12 @@ main .commission-table--title {
 
 /**seccion planes **/
 .bitcoin-img-container {
+    position: relative; /*efecto parallax*/
     width: 100%;
     min-width: 320px;
     height: 50vh;
     background-image: url('../assets/img/bitcoinbaby2x.jpg');
+    background-attachment: fixed; /*efecto parallax*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -415,7 +426,7 @@ main .commission-table--title {
 /*scroll de tarjetas*/
 .plans-container--slider {
     display: flex;
-    gap: 30px; /*espacio entre tarjetas*/
+    gap: 10px; /*espacio entre tarjetas*/
     height: 316px;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
@@ -426,7 +437,7 @@ main .commission-table--title {
     position: relative;
     scroll-snap-align: center; /*css de scroll en la tarjeta*/
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
     margin: 50px auto 0; /*auto para q no haya desp´roporcion al lado derecho de la tarjeta*/
@@ -499,4 +510,31 @@ main .commission-table--title {
     height: 20px;
     background-image: url('../assets/icons/orange-right-arrow.svg');
     vertical-align: text-bottom; /*alinea el texto con el icono en el centro*/
+}
+
+/**FOOTER**/
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.left li {
+    margin: 10px 0;
+}
+.left a {
+    text-decoration: none;
+    color: var(--just-white);
 }
